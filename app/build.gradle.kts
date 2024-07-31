@@ -8,6 +8,10 @@ plugins {
 	jacoco
 }
 
+application {
+    applicationName = "app"
+}
+
 group = "hexlet.code"
 version = "0.0.1-SNAPSHOT"
 
