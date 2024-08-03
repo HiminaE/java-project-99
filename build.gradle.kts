@@ -7,18 +7,14 @@ plugins {
 	id("io.freefair.lombok") version "8.6"
 	id("io.sentry.jvm.gradle") version "4.8.0"
 }
+application {mainClass.set("hexlet.code.AppApplication")}
 
 group = "hexlet.code"
-version = "0.0.1-SNAPSHOT"
-
-java {
-	sourceCompatibility = JavaVersion.VERSION_20
-}
+version = "1.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
 }
-application { mainClass.set("hexlet.code.AppApplication") }
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter:3.3.2")
@@ -52,32 +48,25 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 }
 
-tasks.test {
-	useJUnitPlatform()
-	finalizedBy(tasks.jacocoTestReport)
-}
-
-tasks.jacocoTestReport {
-	dependsOn (tasks.test)
-	reports {
-		xml.required = true
-		csv.required = false
-	}
-}
-buildscript {
-	repositories {
-		mavenCentral()
-	}
-}
-
 sentry {
 	// Generates a JVM (Java, Kotlin, etc.) source bundle and uploads your source code to Sentry.
 	// This enables source context, allowing you to see your source
 	// code as part of your stack traces in Sentry.
 	includeSourceContext = true
-	org = "home-sti"
+
+	org = "personal-use-jw"
 	projectName = "java-spring-boot"
 	authToken = System.getenv("SENTRY_AUTH_TOKEN")
+}
+
+tasks.test {
+	useJUnitPlatform()
+}
+
+tasks.jacocoTestReport {
+	reports {
+		xml.required.set(true)
+	}
 }
 
 tasks.sentryBundleSourcesJava {
