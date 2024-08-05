@@ -17,7 +17,7 @@ public class AppApplicationTests {
 
     @Test
     public void testWelcomePage() throws Exception {
-	mockMvc.perform(get("/welcome"))
+        mockMvc.perform(get("/welcome"))
 				.andExpect(status().isOk());
     }
 }
