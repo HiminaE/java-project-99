@@ -25,10 +25,14 @@ jobs:
       - uses: gradle/gradle-build-action@v3
         with:
           gradle-version: 8.7
-      - uses: paambaati/codeclimate-action@v6.0.0
+      - name: Make build
+        run: make build
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v6.0.0
         env:
           CC_TEST_REPORTER_ID: "d50a302e2e01e4e51addeff481e9fa4de7284f96997ae0122e8f2e2455d4eb29"
           JACOCO_SOURCE_PATH: "${{github.workspace}}src/main/java"
         with:
-          coverageCommand: make -C app report
-          coverageLocations: ${{github.workspace}}/build/reports/jacoco/test/jacocoTestReport.xml:jacoco
+          coverageCommand: make test_report
+          coverageLocations: build/reports/jacoco/test/jacocoTestReport.xml:jacoco
+          debug: true
