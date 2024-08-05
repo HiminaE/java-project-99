@@ -13,4 +13,5 @@ public interface TaskRepository extends JpaRepository<Task, Long>, JpaSpecificat
     Optional<Task> findByName(String name);
     List<Task> findByAssigneeId(Long id);
     List<Task> findByTaskStatusId(Long id);
+
 }
