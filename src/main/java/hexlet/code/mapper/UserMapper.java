@@ -30,4 +30,5 @@ public abstract class UserMapper {
 
     public abstract UserDTO map(User user);
     public abstract void update(UserUpdateDTO userUpdate, @MappingTarget User user);
+
 }

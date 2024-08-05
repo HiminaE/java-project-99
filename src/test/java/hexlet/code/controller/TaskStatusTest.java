@@ -125,4 +125,5 @@ public class TaskStatusTest {
         TaskStatus destroyedStatus = taskStatusRepository.findById(testStatus.getId()).orElse(null);
         assertThat(destroyedStatus).isNull();
     }
+
 }

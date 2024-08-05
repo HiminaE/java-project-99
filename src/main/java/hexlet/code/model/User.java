@@ -97,4 +97,5 @@ public class User implements BaseEntity, UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

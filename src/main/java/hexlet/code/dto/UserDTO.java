@@ -12,11 +12,10 @@ public class UserDTO {
     private Long id;
 
     private String firstName;
-
     private String lastName;
-
     private String email;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate createdAt;
+
 }

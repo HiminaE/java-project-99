@@ -17,8 +17,11 @@ import org.mapstruct.MappingTarget;
         unmappedTargetPolicy = ReportingPolicy.IGNORE
 )
 public abstract class TaskStatusMapper {
+
     public abstract TaskStatus map(TaskStatusCreateDTO taskStatusCreateDTO);
     public abstract TaskStatusDTO map(TaskStatus taskStatus);
 
     public abstract void update(TaskStatusUpdateDTO taskStatusUpdateDTO, @MappingTarget TaskStatus taskStatus);
+
 }
+

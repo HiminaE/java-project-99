@@ -9,19 +9,14 @@ import java.util.List;
 @Getter
 @Setter
 public class TaskCreateDTO {
+
     private Long id;
-
     private String title;
-
     private Integer index;
-
     private String content;
-
     private String status;
-
     private Long assigneeId;
-
     private List<Long> taskLabelIds;
-
     private LocalDate createdAt;
+
 }

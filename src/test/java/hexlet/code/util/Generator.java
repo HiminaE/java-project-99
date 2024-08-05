@@ -67,4 +67,5 @@ public class Generator {
                 .supply(Select.field("name"), () -> faker.lorem().characters(3, 1000))
                 .toModel();
     }
+
 }

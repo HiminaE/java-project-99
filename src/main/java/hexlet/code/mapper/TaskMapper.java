@@ -71,4 +71,5 @@ public abstract class TaskMapper {
         return statusRepository.findBySlug(statusSlug)
                 .orElseThrow(() -> new ResourceNotFoundException("TaskStatus with slug " + statusSlug + " not found"));
     }
+
 }

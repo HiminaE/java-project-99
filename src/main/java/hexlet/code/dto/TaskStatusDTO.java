@@ -11,11 +11,10 @@ import java.time.LocalDate;
 public class TaskStatusDTO {
 
     private Long id;
-
     private String name;
-
     private String slug;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate createdAt;
+
 }

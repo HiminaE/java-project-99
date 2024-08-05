@@ -11,4 +11,5 @@ public class TaskParamDTO {
     private Long assigneeId;
     private String status;
     private Long labelId;
+
 }

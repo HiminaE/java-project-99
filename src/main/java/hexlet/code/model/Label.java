@@ -34,4 +34,5 @@ public class Label {
 
     @CreatedDate
     private LocalDate createdAt;
+
 }

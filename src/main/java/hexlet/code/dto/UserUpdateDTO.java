@@ -23,4 +23,5 @@ public class UserUpdateDTO {
     @NotNull
     @Size(min = 3)
     private JsonNullable<String> password;
+
 }
