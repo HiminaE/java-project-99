@@ -12,12 +12,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class AppApplicationTests {
 
-	@Autowired
-	private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-	@Test
-	public void testWelcomePage() throws Exception {
-		mockMvc.perform(get("/welcome"))
+    @Test
+    public void testWelcomePage() throws Exception {
+	mockMvc.perform(get("/welcome"))
 				.andExpect(status().isOk());
-	}
+    }
 }
