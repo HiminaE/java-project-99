@@ -1,12 +1,14 @@
 plugins {
-	application
-	checkstyle
-	id("jacoco")
-	id("org.springframework.boot") version "3.3.1"
-	id("io.spring.dependency-management") version "1.1.5"
-	id("io.freefair.lombok") version "8.6"
-	id("com.github.ben-manes.versions") version "0.50.0"
-	id("io.sentry.jvm.gradle") version "4.10.0"
+    id("com.github.ben-manes.versions") version "0.48.0"
+    id("application")
+    id("checkstyle")
+    id("jacoco")
+    id("org.springframework.boot") version "3.2.2"
+    id("io.spring.dependency-management") version "1.1.4"
+    id("io.sentry.jvm.gradle") version "4.4.1"
+    id("io.freefair.lombok") version "8.4"
+}
+
 }
 application {mainClass.set("hexlet.code.AppApplication")}
 
