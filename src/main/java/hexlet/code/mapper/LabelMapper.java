@@ -20,9 +20,7 @@ import org.mapstruct.MappingTarget;
 public abstract class LabelMapper {
 
     public abstract Label map(LabelCreateDTO labelCreateDTO);
-
     public abstract LabelDTO map(Label label);
-
     public abstract void update(LabelUpdateDTO labelUpdateDTO, @MappingTarget Label label);
 
 }

@@ -1,5 +1,6 @@
 package hexlet.code.mapper;
 
+
 import hexlet.code.model.BaseEntity;
 import jakarta.persistence.EntityManager;
 import org.mapstruct.Mapper;

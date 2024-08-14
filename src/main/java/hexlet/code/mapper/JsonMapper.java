@@ -1,5 +1,6 @@
 package hexlet.code.mapper;
 
+
 import org.mapstruct.Condition;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
