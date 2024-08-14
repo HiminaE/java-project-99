@@ -1,5 +1,6 @@
 package hexlet.code.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.EntityListeners;
